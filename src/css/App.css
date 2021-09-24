@@ -41,7 +41,7 @@ body {
 }
 
 .cart-icon {
-  color: #ffa400;
+  color: #ffa400 !important;
   -webkit-transition: 200ms;
   transition: 200ms;
   opacity: 1;
