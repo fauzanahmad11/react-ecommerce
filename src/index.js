@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter as Router} from 'react-router-dom'; //import Router
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {ProductProvider} from './Context';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* Tambahkan Pembungkus </ProductProvider> untuk mengalirkan seluruh data yg ada didalamnya keseluruh route yang ada filenya terdapat di Context.js */}
+    <ProductProvider>
+      {/* bungkus App kedalam Router untuk menjalankannya nih dong ah */}
+      <Router>
+        <App />
+      </Router> 
+    </ProductProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
